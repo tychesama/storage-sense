@@ -61,7 +61,7 @@ export const storageTypes: StorageType[] = [
     shortName: "HDD",
     summary:
       "Large, affordable storage with spinning platters. Good for backups, archives, media libraries, and bulk files that do not need top speed.",
-    image: "/images/hdd%20closeup.jpg",
+    image: "/images/hdd%20lego%20image.jpg",
     wikiUrl: "https://en.wikipedia.org/wiki/Hard_disk_drive",
     bestFor: ["Large backups", "Desktop bulk storage", "Photos and video archives", "Low-cost external drives"],
     avoid: [

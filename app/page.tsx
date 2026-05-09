@@ -32,7 +32,7 @@ const reliabilityTopics = [
 export default function HomePage() {
   return (
     <>
-      <section className="hero-bg border-b section-line text-bone">
+      <section className="hero-bg text-bone">
         <div className="section-content mx-auto grid min-h-[84svh] max-w-7xl content-end gap-12 px-4 pb-24 pt-32 sm:px-6 lg:grid-cols-[1.05fr_0.95fr] lg:px-8">
           <div>
             <p className="text-xs font-semibold uppercase text-[#8bbcff]">Made by Joem Idpan</p>
@@ -56,7 +56,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="comparisons" className="blueprint-bg blueprint-glow section-transition scroll-mt-24 border-b section-line text-bone">
+      <section id="comparisons" className="blueprint-bg blueprint-glow section-transition scroll-mt-24 text-bone">
         <div className="section-content mx-auto max-w-7xl px-4 py-28 sm:px-6 lg:px-8 xl:py-32">
           <div className="grid gap-12 lg:grid-cols-[1.05fr_0.95fr]">
             <div>
@@ -122,7 +122,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="storage-reliability" className="blueprint-bg scroll-mt-24 border-b section-line text-bone">
+      <section id="storage-reliability" className="blueprint-bg scroll-mt-24 text-bone">
         <div className="section-content mx-auto max-w-7xl px-4 py-28 sm:px-6 lg:px-8 xl:py-32">
           <div className="text-center">
               <p className="text-xs font-semibold uppercase text-[#8bbcff]">Storage Reliability</p>
@@ -145,7 +145,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="storage-types" className="blueprint-bg scroll-mt-24 border-b section-line text-bone">
+      <section id="storage-types" className="blueprint-bg scroll-mt-24 text-bone">
         <div className="section-content mx-auto max-w-7xl px-4 py-28 sm:px-6 lg:px-8 xl:py-32">
           <div className="grid gap-12 lg:grid-cols-[0.85fr_1.15fr]">
             <div>
@@ -181,7 +181,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="tools" className="blueprint-bg scroll-mt-24 border-b section-line text-bone">
+      <section id="tools" className="blueprint-bg scroll-mt-24 text-bone">
         <div className="section-content mx-auto max-w-7xl px-4 py-28 sm:px-6 lg:px-8 xl:py-32">
           <div className="text-center">
             <p className="text-xs font-semibold uppercase text-[#8bbcff]">Tool workflow</p>
@@ -208,7 +208,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section id="practices" className="blueprint-bg scroll-mt-24 text-bone">
+      <section id="practices" className="blueprint-bg section-bottom-fade scroll-mt-24 text-bone">
         <div className="section-content mx-auto max-w-7xl px-4 py-28 sm:px-6 lg:px-8 xl:py-32">
           <div className="text-center">
             <p className="text-xs font-semibold uppercase text-[#8bbcff]">Storage habits</p>

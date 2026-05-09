@@ -46,7 +46,7 @@ export default function StorageTypesPage() {
                     </p>
                     <h2 className="mt-5 text-4xl font-semibold leading-tight">{item.name}</h2>
                     <p className="mt-5 text-sm leading-7 text-bone/70">{item.summary}</p>
-                    <Link href={item.wikiUrl} className="mt-7 inline-block text-sm font-semibold text-[#8bbcff]">
+                    <Link href={item.wikiUrl} target="_blank" rel="noreferrer" className="mt-7 inline-block text-sm font-semibold text-[#8bbcff]">
                       Wikipedia reference →
                     </Link>
                   </div>

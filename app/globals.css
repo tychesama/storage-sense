@@ -68,6 +68,15 @@ img {
 }
 
 .section-transition::after {
+  display: none;
+}
+
+.section-bottom-fade {
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bottom-fade::after {
   position: absolute;
   inset: auto 0 0;
   height: 120px;
