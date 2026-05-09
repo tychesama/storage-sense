@@ -36,7 +36,7 @@ export default function StorageTypesPage() {
 
       <section className="blueprint-bg text-bone">
         <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid gap-12">
+          <div className="grid gap-24">
             {storageTypes.map((item, index) => (
               <article key={item.slug} id={item.slug} className="scroll-mt-28 border section-line bg-[#071424]/78">
                 <div className="grid border-b section-line lg:grid-cols-[0.36fr_0.64fr]">
@@ -46,6 +46,9 @@ export default function StorageTypesPage() {
                     </p>
                     <h2 className="mt-5 text-4xl font-semibold leading-tight">{item.name}</h2>
                     <p className="mt-5 text-sm leading-7 text-bone/70">{item.summary}</p>
+                    <Link href={item.wikiUrl} className="mt-7 inline-block text-sm font-semibold text-[#8bbcff]">
+                      Wikipedia reference →
+                    </Link>
                   </div>
 
                   <div className="grid gap-px bg-[rgba(103,158,216,0.28)] lg:grid-cols-[0.48fr_0.52fr]">
@@ -81,7 +84,7 @@ export default function StorageTypesPage() {
                 </div>
 
                 <div className="grid gap-10 border-b section-line p-7 lg:grid-cols-2">
-                  <div className="blueprint-card p-6">
+                  <div className="border border-[#8bbcff]/45 bg-[#0b1a2b] p-6">
                     <h3 className="text-3xl font-semibold">
                       <span className="serif-italic font-normal text-teal-300">Strengths</span>
                     </h3>
@@ -94,7 +97,7 @@ export default function StorageTypesPage() {
                       ))}
                     </ul>
                   </div>
-                  <div className="blueprint-card p-6">
+                  <div className="border border-[#8bbcff]/45 bg-[#0b1a2b] p-6">
                     <h3 className="text-3xl font-semibold">
                       <span className="serif-italic font-normal text-red-300">Weaknesses</span>
                     </h3>

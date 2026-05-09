@@ -15,9 +15,6 @@ export function ImageLightbox({ alt, src }: ImageLightboxProps) {
     <>
       <button type="button" onClick={() => setIsOpen(true)} className="group relative min-h-[280px] w-full overflow-hidden bg-[#071424] text-left">
         <Image src={src} alt={alt} fill sizes="(min-width: 1024px) 38vw, 100vw" className="object-cover transition duration-300 group-hover:scale-[1.03]" />
-        <span className="absolute bottom-4 right-4 border border-[#8bbcff]/60 bg-[#071424]/85 px-3 py-2 text-xs font-semibold text-bone">
-          View image
-        </span>
       </button>
 
       {isOpen ? (

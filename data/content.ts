@@ -9,6 +9,7 @@ export type StorageType = {
   shortName: string;
   summary: string;
   image: string;
+  wikiUrl: string;
   bestFor: string[];
   avoid: string[];
   strengths: string[];
@@ -19,6 +20,7 @@ export type StorageType = {
     lifespan: string;
     capacity: string;
     effort: string;
+    care: string;
   };
   sections: {
     title: string;
@@ -59,7 +61,8 @@ export const storageTypes: StorageType[] = [
     shortName: "HDD",
     summary:
       "Large, affordable storage with spinning platters. Good for backups, archives, media libraries, and bulk files that do not need top speed.",
-    image: "/images/HDD%20pick%20apart%20image%20aerial%20view.avif",
+    image: "/images/hdd%20closeup.jpg",
+    wikiUrl: "https://en.wikipedia.org/wiki/Hard_disk_drive",
     bestFor: ["Large backups", "Desktop bulk storage", "Photos and video archives", "Low-cost external drives"],
     avoid: [
       "Do not shake, drop, or move the drive while it is running.",
@@ -73,7 +76,8 @@ export const storageTypes: StorageType[] = [
       value: "Excellent for large files and backup sets.",
       lifespan: "Often 3 to 6 years in normal use, but failure can happen anytime.",
       capacity: "Commonly available in multi-terabyte sizes.",
-      effort: "Needs safe handling and occasional health checks."
+      effort: "Needs safe handling and occasional health checks.",
+      care: "Keep it still while running and protect it from shock."
     },
     sections: [
       {
@@ -94,7 +98,8 @@ export const storageTypes: StorageType[] = [
     shortName: "SSD",
     summary:
       "Fast storage with no moving parts. Best for operating systems, applications, active projects, games, and portable work drives.",
-    image: "/images/ssd%20closeup%20image.avif",
+    image: "/images/small%20and%20large%20ssd%20in%20one%20image.avif",
+    wikiUrl: "https://en.wikipedia.org/wiki/Solid-state_drive",
     bestFor: ["Boot drives", "Games and apps", "Active projects", "Portable fast storage"],
     avoid: [
       "Do not fill an SSD completely for long periods.",
@@ -108,7 +113,8 @@ export const storageTypes: StorageType[] = [
       value: "Best value when speed matters.",
       lifespan: "Often lasts many years when not written heavily every day.",
       capacity: "Common consumer sizes range from 500 GB to 4 TB.",
-      effort: "Low maintenance, but leave free space and keep backups."
+      effort: "Low maintenance, but leave free space and keep backups.",
+      care: "Avoid filling it completely and keep a backup copy."
     },
     sections: [
       {
@@ -129,7 +135,8 @@ export const storageTypes: StorageType[] = [
     shortName: "Cloud",
     summary:
       "Storage on remote servers accessed through the internet. Useful for syncing, sharing, and off-site backup, but it depends on account security and connection quality.",
-    image: "/images/datacenter%20image%20cloud.avif",
+    image: "/images/cloud%20image.avif",
+    wikiUrl: "https://en.wikipedia.org/wiki/Cloud_storage",
     bestFor: ["Phone photo backup", "Syncing files across devices", "Sharing folders", "Off-site backup"],
     avoid: [
       "Do not reuse weak passwords on cloud accounts.",
@@ -143,7 +150,8 @@ export const storageTypes: StorageType[] = [
       value: "Great when access and off-site protection matter.",
       lifespan: "Depends on payment, account access, and provider stability.",
       capacity: "Flexible, but large plans can get expensive.",
-      effort: "Low day-to-day effort, but account security matters."
+      effort: "Low day-to-day effort, but account security matters.",
+      care: "Use strong account security and save recovery codes."
     },
     sections: [
       {
@@ -164,7 +172,8 @@ export const storageTypes: StorageType[] = [
     shortName: "Flash",
     summary:
       "Small removable flash storage. Useful for moving files and device storage, but risky as a long-term backup by itself.",
-    image: "/images/flashdrive,%20micro%20sd%20card,%20sd%20card.avif",
+    image: "/images/flashdrive2.avif",
+    wikiUrl: "https://en.wikipedia.org/wiki/USB_flash_drive",
     bestFor: ["Moving files", "Camera cards", "Boot installers", "Short-term handoff storage"],
     avoid: [
       "Do not pull drives out while files are writing.",
@@ -178,7 +187,8 @@ export const storageTypes: StorageType[] = [
       value: "Good for transfer and temporary storage.",
       lifespan: "Varies widely by quality and use.",
       capacity: "Good for small to medium file sets.",
-      effort: "Low effort, but label and verify copies."
+      effort: "Low effort, but label and verify copies.",
+      care: "Eject safely and avoid cheap drives for important files."
     },
     sections: [
       {
@@ -199,7 +209,8 @@ export const storageTypes: StorageType[] = [
     shortName: "CD/DVD",
     summary:
       "Disc media read by lasers. Useful for old collections and occasional offline copies, but limited by capacity, drive availability, and disc condition.",
-    image: "/images/CD%20cassette%20aerial%20view.avif",
+    image: "/images/cd%20worn%20out.avif",
+    wikiUrl: "https://en.wikipedia.org/wiki/Optical_disc",
     bestFor: ["Old media collections", "Offline copies", "Small archives", "Write-once records"],
     avoid: [
       "Do not scratch the readable surface.",
@@ -213,7 +224,8 @@ export const storageTypes: StorageType[] = [
       value: "Useful for specific archives, weak for modern large backups.",
       lifespan: "Depends heavily on disc quality and storage conditions.",
       capacity: "CDs are small; DVDs and Blu-ray hold more but still trail hard drives.",
-      effort: "Requires labeling, cases, and occasional readability checks."
+      effort: "Requires labeling, cases, and occasional readability checks.",
+      care: "Store in cases away from heat, sunlight, and scratches."
     },
     sections: [
       {
@@ -235,6 +247,7 @@ export const storageTypes: StorageType[] = [
     summary:
       "Older media such as floppy disks and aging external formats. Treat them as recovery projects, not dependable storage.",
     image: "/images/floppy%20disk.avif",
+    wikiUrl: "https://en.wikipedia.org/wiki/Floppy_disk",
     bestFor: ["Reading old files", "Preserving old projects", "Retro computing", "Migration work"],
     avoid: [
       "Do not keep rare files only on legacy media.",
@@ -248,7 +261,8 @@ export const storageTypes: StorageType[] = [
       value: "Important only when the data cannot be found elsewhere.",
       lifespan: "Many old media formats are already past reliable age.",
       capacity: "Very small by modern standards.",
-      effort: "High effort because adapters, readers, and recovery checks may be needed."
+      effort: "High effort because adapters, readers, and recovery checks may be needed.",
+      care: "Copy data to modern storage before the media gets worse."
     },
     sections: [
       {
