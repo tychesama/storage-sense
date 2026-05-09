@@ -26,7 +26,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-paper">
+      <section id="guides" className="scroll-mt-24 bg-paper">
         <div className="mx-auto grid max-w-7xl gap-6 px-4 py-12 sm:px-6 md:grid-cols-3 lg:px-8">
           {[
             ["Storage types", "Understand HDDs, SSDs, cloud, flash media, discs, and legacy devices.", "/storage-types"],
@@ -42,7 +42,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-bone">
+      <section id="storage-types" className="scroll-mt-24 bg-bone">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="flex flex-col justify-between gap-6 md:flex-row md:items-end">
             <div>
@@ -61,7 +61,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="border-y border-ink/10 bg-ink text-bone">
+      <section id="comparisons" className="scroll-mt-24 border-y border-ink/10 bg-ink text-bone">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.8fr_1.2fr] lg:px-8">
           <div>
             <p className="text-sm font-semibold uppercase text-bone/60">Quick chooser</p>
@@ -82,7 +82,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-paper">
+      <section id="tools" className="scroll-mt-24 bg-paper">
         <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
           <div className="max-w-3xl">
             <p className="text-sm font-semibold uppercase text-moss">Tool workflow</p>
@@ -96,7 +96,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="bg-bone">
+      <section id="practices" className="scroll-mt-24 bg-bone">
         <div className="mx-auto grid max-w-7xl gap-8 px-4 py-20 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div>
             <p className="text-sm font-semibold uppercase text-moss">Storage habits</p>

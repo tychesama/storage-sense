@@ -45,11 +45,11 @@ export type Practice = {
 };
 
 export const navItems: NavItem[] = [
-  { label: "Types", href: "/storage-types" },
-  { label: "Comparisons", href: "/comparisons" },
-  { label: "Tools", href: "/tools" },
-  { label: "Practices", href: "/practices" },
-  { label: "Guides", href: "/guides" }
+  { label: "Types", href: "/#storage-types" },
+  { label: "Comparisons", href: "/#comparisons" },
+  { label: "Tools", href: "/#tools" },
+  { label: "Practices", href: "/#practices" },
+  { label: "Guides", href: "/#guides" }
 ];
 
 export const storageTypes: StorageType[] = [
