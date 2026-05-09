@@ -36,8 +36,8 @@ export default function ToolsPage() {
       </section>
 
       <section className="blueprint-bg text-bone">
-        <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8">
-          <div className="grid gap-12">
+        <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8">
+          <div className="grid gap-20">
             {tools.map((tool, index) => (
               <article key={tool.slug} id={tool.slug} className="scroll-mt-28 border section-line bg-[#071424]/78">
                 <div className="grid border-b section-line lg:grid-cols-[0.36fr_0.64fr]">
@@ -52,13 +52,19 @@ export default function ToolsPage() {
                     <p className="mt-6 text-sm leading-7 text-bone/72">{tool.purpose}</p>
                   </div>
 
-                  <div className="grid gap-px bg-[rgba(103,158,216,0.28)] md:grid-cols-3">
-                    {tool.bestFor.map((item) => (
-                      <div key={item} className="bg-[#071424] p-5">
-                        <p className="font-mono text-xs uppercase text-[#8bbcff]">Best for</p>
-                        <p className="mt-3 text-sm leading-6 text-bone/72">{item}</p>
-                      </div>
-                    ))}
+                  <div className="grid gap-px bg-[rgba(103,158,216,0.28)] lg:grid-cols-[0.56fr_0.44fr]">
+                    <div className="relative min-h-[260px] bg-[#071424]">
+                      <Image src={tool.image} alt="" fill sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover opacity-85" />
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#071424]/80 via-transparent to-transparent" />
+                    </div>
+                    <div className="grid gap-px bg-[rgba(103,158,216,0.28)]">
+                      {tool.bestFor.map((item) => (
+                        <div key={item} className="bg-[#071424] p-5">
+                          <p className="font-mono text-xs uppercase text-[#8bbcff]">Best for</p>
+                          <p className="mt-3 text-sm leading-6 text-bone/72">{item}</p>
+                        </div>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
