@@ -49,7 +49,7 @@ export const navItems: NavItem[] = [
   { label: "Comparisons", href: "/#comparisons" },
   { label: "Tools", href: "/#tools" },
   { label: "Practices", href: "/#practices" },
-  { label: "Guides", href: "/#guides" }
+  { label: "Reliability", href: "/#storage-reliability" }
 ];
 
 export const storageTypes: StorageType[] = [

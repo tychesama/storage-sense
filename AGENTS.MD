@@ -15,6 +15,9 @@
 - Avoid repeating the same explanation across pages. Link related pages instead.
 - Prefer simple advice, practical examples, and beginner-friendly wording.
 - Explain storage topics from hardware basics through practical file management workflows.
+- Keep the site teaching-first. Do not write pages like a sales pitch.
+- Use calm lesson-style language: explain concepts, show tradeoffs, and give safe steps.
+- Avoid pushy marketing language such as "built for", "unlock", "transform", or claims that pressure the reader.
 
 ## Design Direction
 - Use https://revenuebase.ai/?ref=land-book.com as the visual reference.
@@ -22,6 +25,9 @@
 - The design should feel calm, technical, and trustworthy.
 - Do not make the site look like a generic marketing landing page only. The first screen should clearly introduce Storage Sense and lead into useful learning paths.
 - Use the images already placed in the `images` folder before adding new assets.
+
+## Collaboration Note
+- The site owner may edit the code while work is happening. Always check `git status --short` before editing, and do not overwrite or revert changes made outside the current task.
 
 ## Planned Information Architecture
 - **Landing Page**

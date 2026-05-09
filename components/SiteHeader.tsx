@@ -7,7 +7,7 @@ export function SiteHeader() {
       <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
         <Link href="/" className="flex items-center gap-2 font-semibold text-bone" aria-label="Storage Sense home">
           <span className="grid h-9 w-9 place-items-center border border-[#8bbcff] bg-[#0b2138] text-sm text-bone">SS</span>
-          <span className="hidden border border-[#8bbcff]/80 px-3 py-2 text-sm leading-none sm:inline-block">
+          <span className="hidden px-3 py-2 text-sm leading-none sm:inline-block">
             Storage<span className="text-[#8bbcff]">Sense</span>
           </span>
         </Link>

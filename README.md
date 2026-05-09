@@ -1,6 +1,6 @@
 # Storage Sense
 
-Storage Sense is a static educational website about storage management. It teaches users how to organize files, understand storage devices, compare backup options, clean up disk space, encrypt important data, and avoid data loss.
+Storage Sense is a static educational website about storage management. Its main goal is to teach, not sell. The site should help readers understand storage devices, organize files, compare backup options, clean up disk space, encrypt important data, and avoid data loss.
 
 The site is planned for `storagesense.joemidpan.com` and will connect back to `joemidpan.com`.
 
@@ -14,7 +14,7 @@ Storage Sense is written for:
 - Beginner developers
 - People who want simple backup and storage advice
 
-The writing should stay clear, practical, and beginner-friendly.
+The writing should stay clear, practical, and beginner-friendly. Pages should explain ideas calmly and avoid sounding like marketing copy.
 
 ## Tech Stack
 
@@ -45,6 +45,22 @@ Storage Sense should use a clean editorial SaaS style:
 - Calm, technical, trustworthy visual tone
 
 Use existing assets from the `images` folder before adding new images.
+
+## Teaching Direction
+
+Storage Sense should read like a helpful reference or lesson series.
+
+- Teach concepts before recommending actions.
+- Explain why a storage habit matters.
+- Prefer examples, comparisons, and step-by-step notes over persuasive claims.
+- Avoid sales-style phrases such as "built for", "unlock", "transform", "upgrade your workflow", or language that pushes the reader.
+- Do not frame the reader as failing. Explain common mistakes as normal situations that can be improved.
+- Use calls to action as navigation labels, such as "Read the guide", "Compare storage types", or "Learn the cleanup workflow".
+- Keep the tone patient and practical.
+
+## Collaboration Notes
+
+The site owner may edit the code while this project is being worked on. Before changing files, check the current worktree and avoid overwriting edits that were made outside the current task.
 
 ## Planned Pages
 
