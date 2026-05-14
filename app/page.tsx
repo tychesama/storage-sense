@@ -7,25 +7,54 @@ const reliabilityTopics = [
     label: "Practicality",
     title: "Cost, effort, upkeep.",
     body: "A storage choice is practical when the cost, setup time, maintenance, and daily effort match the value of the files.",
-    tone: "border-teal-400 bg-teal-950/45 text-teal-100"
+    tone: "border-teal-400 bg-teal-950/45 text-teal-100",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+        <path d="M12 3 4 7v10l8 4 8-4V7l-8-4Z" stroke="currentColor" strokeWidth="1.7" />
+        <path d="M8 11h8" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M8 15h5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+      </svg>
+    )
   },
   {
     label: "Storage Space",
     title: "Usable room over time.",
     body: "Capacity matters, but usable space also depends on file growth, duplicate copies, backup versions, and free space for healthy operation.",
-    tone: "border-slate-400 bg-slate-800/55 text-slate-100"
+    tone: "border-slate-400 bg-slate-800/55 text-slate-100",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+        <rect x="4" y="5" width="16" height="14" rx="2" stroke="currentColor" strokeWidth="1.7" />
+        <path d="M8 9h8M8 13h8M8 17h4" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+      </svg>
+    )
   },
   {
     label: "Reliability",
     title: "Failure points and protection.",
     body: "Reliable storage planning accounts for device failure, accidental deletion, lost accounts, damaged media, and missing recovery steps.",
-    tone: "border-sky-400 bg-sky-950/45 text-sky-100"
+    tone: "border-sky-400 bg-sky-950/45 text-sky-100",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+        <path d="M12 3 4.5 6v5.5C4.5 16.8 7.9 20.1 12 21c4.1-.9 7.5-4.2 7.5-9.5V6L12 3Z" stroke="currentColor" strokeWidth="1.7" />
+        <path d="m8.5 12 2.4 2.4L15.6 9.7" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" strokeLinejoin="round" />
+      </svg>
+    )
   },
   {
     label: "Efficiency",
     title: "Fast finding and recovery.",
     body: "Efficient storage is organized enough that cleanup, search, transfer, backup, and recovery do not become separate emergencies.",
-    tone: "border-amber-500 bg-amber-950/50 text-amber-100"
+    tone: "border-amber-500 bg-amber-950/50 text-amber-100",
+    icon: (
+      <svg viewBox="0 0 24 24" className="h-5 w-5" fill="none" aria-hidden="true">
+        <path d="M12 4v3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M6.5 6.5 8.5 8.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M17.5 6.5 15.5 8.5" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M4 13a8 8 0 1 1 16 0" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <path d="M12 13l4-3" stroke="currentColor" strokeWidth="1.7" strokeLinecap="round" />
+        <circle cx="12" cy="13" r="1.25" fill="currentColor" />
+      </svg>
+    )
   }
 ];
 
@@ -135,7 +164,9 @@ export default function HomePage() {
           <div className="mt-20 grid gap-10 md:grid-cols-2 xl:grid-cols-4">
             {reliabilityTopics.map((item) => (
               <article key={item.label} className={`blueprint-card min-h-[330px] p-7 ${item.tone}`}>
-                <div className="grid h-10 w-10 place-items-center border border-current font-mono text-sm">/</div>
+                <div className="grid h-10 w-10 place-items-center border border-current text-current" aria-hidden="true">
+                  {item.icon}
+                </div>
                 <p className="mt-8 text-sm font-semibold">{item.label}</p>
                 <h3 className="mt-4 text-2xl font-semibold leading-tight">{item.title}</h3>
                 <p className="mt-6 text-sm leading-6 text-current/80">{item.body}</p>

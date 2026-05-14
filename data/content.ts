@@ -34,10 +34,15 @@ export type ToolGuide = {
   purpose: string;
   image: string;
   logo: string;
+  officialUrl: string;
+  wikiUrl?: string;
   bestFor: string[];
   steps: string[];
   mistakes: string[];
-  alternatives: string[];
+  alternatives: {
+    label: string;
+    href: string;
+  }[];
 };
 
 export type Practice = {
@@ -286,6 +291,8 @@ export const tools: ToolGuide[] = [
     purpose: "Find large files and folders quickly so you can understand what is using disk space.",
     image: "/images/wiztree%20image.avif",
     logo: "/images/wiztree%20logo.png",
+    officialUrl: "https://wiztree.app/",
+    wikiUrl: "https://en.wikipedia.org/wiki/Disk_Usage_Analyzer",
     bestFor: ["Full Windows drives", "Large file hunting", "Before uninstalling or deleting files"],
     steps: [
       "Open WizTree as administrator so it can scan the full drive.",
@@ -300,7 +307,14 @@ export const tools: ToolGuide[] = [
       "Cleaning only tiny files while ignoring the largest folders.",
       "Forgetting to empty the recycle bin after deleting large files."
     ],
-    alternatives: ["TreeSize Free", "WinDirStat", "Windows Storage settings"]
+    alternatives: [
+      { label: "TreeSize Free", href: "https://www.jam-software.com/treesize_free" },
+      { label: "WinDirStat", href: "https://en.wikipedia.org/wiki/WinDirStat" },
+      {
+        label: "Windows Storage settings",
+        href: "https://support.microsoft.com/windows/free-up-drive-space-in-windows-855a18d4-18f8-8003-18a8-75b503423138"
+      }
+    ]
   },
   {
     slug: "alldup",
@@ -308,6 +322,8 @@ export const tools: ToolGuide[] = [
     purpose: "Find duplicate files so you can remove repeated copies safely.",
     image: "/images/alldup.png",
     logo: "/images/alldup-logo.avif",
+    officialUrl: "https://www.alldup.de/",
+    wikiUrl: "https://en.wikipedia.org/wiki/Fast_Duplicate_File_Finder",
     bestFor: ["Duplicate photos", "Repeated downloads", "Messy backup folders"],
     steps: [
       "Choose one folder or drive to scan first.",
@@ -322,7 +338,11 @@ export const tools: ToolGuide[] = [
       "Scanning system folders together with personal folders.",
       "Assuming same file names always mean same content."
     ],
-    alternatives: ["dupeGuru", "Duplicate Cleaner Free", "Czkawka"]
+    alternatives: [
+      { label: "dupeGuru", href: "https://dupeguru.voltaicideas.net/" },
+      { label: "Duplicate Cleaner Free", href: "https://www.digitalvolcano.co.uk/dcdownloads.html" },
+      { label: "Czkawka", href: "https://github.com/qarmin/czkawka" }
+    ]
   },
   {
     slug: "dropit",
@@ -330,6 +350,8 @@ export const tools: ToolGuide[] = [
     purpose: "Create rules that move, copy, rename, or organize files manually.",
     image: "/images/dropit.jpg",
     logo: "/images/dropit%20logo.jpg",
+    officialUrl: "https://www.dropitproject.com/",
+    wikiUrl: "https://en.wikipedia.org/wiki/Automation",
     bestFor: ["Sorting downloads", "Organizing school files", "Repeat file cleanup routines"],
     steps: [
       "Create a profile for one workflow, such as downloads cleanup.",
@@ -344,7 +366,11 @@ export const tools: ToolGuide[] = [
       "Moving files when copy would be safer.",
       "Creating too many rules before you understand the workflow."
     ],
-    alternatives: ["File Juggler", "Hazel on macOS", "Power Automate", "Manual folder templates"]
+    alternatives: [
+      { label: "File Juggler", href: "https://www.filejuggler.com/" },
+      { label: "Hazel", href: "https://www.noodlesoft.com/" },
+      { label: "Power Automate", href: "https://www.microsoft.com/power-platform/products/power-automate" }
+    ]
   },
   {
     slug: "veracrypt",
@@ -352,6 +378,8 @@ export const tools: ToolGuide[] = [
     purpose: "Encrypt sensitive files or drives so private data is protected if storage is lost or stolen.",
     image: "/images/veracrypt.png",
     logo: "/images/veracrypt%20logo.png",
+    officialUrl: "https://veracrypt.io/en/Home.html",
+    wikiUrl: "https://en.wikipedia.org/wiki/VeraCrypt",
     bestFor: ["Private documents", "Portable encrypted containers", "Sensitive backup drives"],
     steps: [
       "Create a standard encrypted file container.",
@@ -366,7 +394,12 @@ export const tools: ToolGuide[] = [
       "Leaving the container mounted on a shared computer.",
       "Keeping only one copy of an encrypted container."
     ],
-    alternatives: ["BitLocker", "FileVault", "Cryptomator", "7-Zip encrypted archives"]
+    alternatives: [
+      { label: "BitLocker", href: "https://en.wikipedia.org/wiki/BitLocker" },
+      { label: "FileVault", href: "https://en.wikipedia.org/wiki/FileVault" },
+      { label: "Cryptomator", href: "https://cryptomator.org/" },
+      { label: "7-Zip", href: "https://www.7-zip.org/" }
+    ]
   }
 ];
 

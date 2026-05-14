@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { ImageLightbox } from "@/components/ImageLightbox";
 import { tools } from "@/data/content";
 
 type PageProps = {
@@ -50,10 +51,18 @@ export default function ToolDetailPage({ params }: PageProps) {
             </div>
             <h1 className="mt-5 text-5xl font-semibold leading-tight">{tool.name}</h1>
             <p className="mt-5 text-lg leading-8 text-bone/75">{tool.purpose}</p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <Link href={tool.officialUrl} target="_blank" rel="noreferrer" className="rounded border border-bone/20 bg-bone px-4 py-2 text-sm font-semibold text-ink transition hover:bg-paper">
+                Official page
+              </Link>
+              {tool.wikiUrl ? (
+                <Link href={tool.wikiUrl} target="_blank" rel="noreferrer" className="rounded border border-bone/20 px-4 py-2 text-sm font-semibold text-bone transition hover:bg-bone hover:text-ink">
+                  Wikipedia
+                </Link>
+              ) : null}
+            </div>
           </div>
-          <div className="relative min-h-[360px] overflow-hidden rounded">
-            <Image src={tool.image} alt="" fill priority sizes="(min-width: 1024px) 50vw, 100vw" className="object-cover" />
-          </div>
+          <ImageLightbox src={tool.image} alt={`${tool.name} preview`} />
         </div>
       </section>
 
@@ -95,7 +104,11 @@ export default function ToolDetailPage({ params }: PageProps) {
             <h2 className="text-3xl font-semibold text-ink">Alternatives</h2>
             <ul className="mt-6 grid gap-3 text-sm leading-6 text-ink/70">
               {tool.alternatives.map((item) => (
-                <li key={item}>{item}</li>
+                <li key={item.label}>
+                  <Link href={item.href} target="_blank" rel="noreferrer" className="underline decoration-ink/25 underline-offset-4 hover:decoration-ink">
+                    {item.label}
+                  </Link>
+                </li>
               ))}
             </ul>
           </div>

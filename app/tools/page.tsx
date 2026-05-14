@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
+import { ImageLightbox } from "@/components/ImageLightbox";
 import { tools } from "@/data/content";
 
 export const metadata: Metadata = {
@@ -50,13 +51,30 @@ export default function ToolsPage() {
                       </div>
                     </div>
                     <p className="mt-6 text-sm leading-7 text-bone/72">{tool.purpose}</p>
+                    <div className="mt-6 flex flex-wrap gap-3">
+                      <Link
+                        href={tool.officialUrl}
+                        target="_blank"
+                        rel="noreferrer"
+                        className="border border-[#8bbcff] bg-[#8bbcff] px-4 py-2 text-xs font-semibold uppercase tracking-wide text-[#071424] transition hover:bg-bone"
+                      >
+                        Official page
+                      </Link>
+                      {tool.wikiUrl ? (
+                        <Link
+                          href={tool.wikiUrl}
+                          target="_blank"
+                          rel="noreferrer"
+                          className="border border-bone/35 px-4 py-2 text-xs font-semibold uppercase tracking-wide text-bone transition hover:bg-bone hover:text-[#071424]"
+                        >
+                          Wikipedia
+                        </Link>
+                      ) : null}
+                    </div>
                   </div>
 
                   <div className="grid gap-px bg-[rgba(103,158,216,0.28)] lg:grid-cols-[0.56fr_0.44fr]">
-                    <div className="relative min-h-[260px] bg-[#071424]">
-                      <Image src={tool.image} alt="" fill sizes="(min-width: 1024px) 42vw, 100vw" className="object-cover opacity-85" />
-                      <div className="absolute inset-0 bg-gradient-to-t from-[#071424]/80 via-transparent to-transparent" />
-                    </div>
+                    <ImageLightbox src={tool.image} alt={`${tool.name} preview`} />
                     <div className="grid gap-px bg-[rgba(103,158,216,0.28)]">
                       {tool.bestFor.map((item) => (
                         <div key={item} className="bg-[#071424] p-5">
@@ -91,15 +109,22 @@ export default function ToolsPage() {
                       </ul>
                     </div>
 
-                    <div className="bg-[#071424] p-7">
-                      <h3 className="text-2xl font-semibold">Alternatives</h3>
-                      <ul className="mt-5 flex flex-wrap gap-2 text-sm text-bone/75">
-                        {tool.alternatives.map((item) => (
-                          <li key={item} className="border border-[#8bbcff]/30 bg-[#0a1a2b]/70 px-3 py-1">
-                            {item}
-                          </li>
-                        ))}
-                      </ul>
+                  <div className="bg-[#071424] p-7">
+                    <h3 className="text-2xl font-semibold">Alternatives</h3>
+                    <ul className="mt-5 flex flex-wrap gap-2 text-sm text-bone/75">
+                      {tool.alternatives.map((item) => (
+                        <li key={item.label}>
+                          <Link
+                            href={item.href}
+                            target="_blank"
+                            rel="noreferrer"
+                            className="inline-flex border border-[#8bbcff]/30 bg-[#0a1a2b]/70 px-3 py-1 transition hover:border-[#8bbcff] hover:bg-[#102a44]"
+                          >
+                            {item.label}
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
                     </div>
                   </div>
                 </div>
